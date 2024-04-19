@@ -1,5 +1,5 @@
 var links = {
-    busca_produtos: 'http://127.0.0.1:5000/produtos',
+    busca_produtos: 'http://127.0.0.1:5000/produto',
     busca_produto: 'http://127.0.0.1:5000/produto/?nome=',
     delete_produto: 'http://127.0.0.1:5000/produto?nome=',
     insert_produto_base: 'http://127.0.0.1:5000/produto',
