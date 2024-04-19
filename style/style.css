@@ -1,0 +1,180 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    height: 362px;
+    width: 168px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #D9D9D9;
+    border-right: 1px solid black;
+}
+
+nav a {
+    width: 126px;
+    height: 53px;
+    border: 1px solid black;
+    border-radius: 15px;
+    text-align: center;
+    align-content: center;
+    background-color: #ffffff;
+}
+
+header {
+    display: flex;
+    background-color: #F1F1F1;
+    border: 1px solid;
+}
+#painel {
+    display: flex;
+    flex-direction: column;
+    margin: 3%;
+}
+
+#painel select {
+    width: 470px;
+    height: 30px;
+    border-radius: 8px;
+}
+
+input {
+    width: 170px;
+    height: 25px;
+    border-radius: 8px;
+}
+
+label * {
+    display: block;
+}
+
+header section {
+    width: 100%;
+    position: relative;
+}
+
+header section #btn_acoes {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    
+    width: 250px;
+    height: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+header section #btn_acoes a {
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 15px;
+    text-align: center;
+    align-content: center;
+    background-color: #ffffff;
+}
+
+header section #btn_acoes a:last-child {
+    right: 0;
+}
+
+.bg_text {
+    width: 470px !important;
+}
+
+main {
+    margin: auto;
+    width: 1030px;
+    height: 600px;
+}
+
+tr:nth-child(even) {
+    background-color: #F1F1F1;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 56px;
+}
+
+td, th {
+    border: 1px solid #000;
+    padding: 3px;
+    text-align: left;
+}
+
+
+th {
+    background-color: #D9D9D9;
+}
+
+
+/* A partir daqui é do botão de switch*/
+.switch {
+    top: 20px;
+    right: 20px;
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    background-color: #ccc;
+    border-radius: 20px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    transition: .4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: attr(data-label);
+    color: #555;
+    font-size: 12px;
+    text-transform: uppercase;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.switch input:checked + .slider:before {
+    content: attr(data-checked-label);
+    color: #fff;
+}
+
+.slider:before, .slider:after {
+    transition: .4s;
+}
+
+.switch input:checked + .slider {
+    background-color: #2196F3;
+}
+
+#valores {
+    display: flex;
+    margin-bottom: 20px;
+    margin-left: 3%; 
+}
