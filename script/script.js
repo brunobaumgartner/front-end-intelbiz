@@ -294,7 +294,6 @@ function painel_produto_cadastro() {
                         </div>
                         `;
 
-    // Defina um evento de clique para o link de adicionar produto
     var btnAdicionar = document.getElementById("btn_atualizar");
     btnAdicionar.addEventListener("click", function() {
         var nome = document.getElementById("produto_nome").value;
@@ -431,7 +430,6 @@ async function busca_produtos() {
             throw new Error('Erro ao obter dados');
         }
         const dado = await response.json();
-        // Retorne os dados para que possam ser utilizados por quem chamar a função
         return dado.produtos.map(item => ({
             id: item.id,
             Quantidade: item.quantidade,
@@ -440,7 +438,6 @@ async function busca_produtos() {
         }));
     } catch (error) {
         console.error('Error:', error);
-        // Em caso de erro, lance o erro para que possa ser tratado por quem chamar a função
         throw error;
     }
 }
@@ -455,11 +452,9 @@ async function busca_produto(nome) {
             throw new Error('Erro ao obter dados');
         }
         const dado = await response.json();
-        // Retorne os dados para que possam ser utilizados por quem chamar a função
         return dado;
     } catch (error) {
         console.error('Error:', error);
-        // Em caso de erro, lance o erro para que possa ser tratado por quem chamar a função
         throw error;
     }
 }
@@ -667,9 +662,6 @@ async function insert_venda_base(cliente_id, produto_id, quantidade, venda_id) {
     });
 }
 
-
-
-
 /*  ----------------- CRIANDO E POPULANDO TABELAS --------------------- */
 /* -=-=-=-=-=-==-=-=-           PRODUTOS          =-=-=-=-=-=-=-=-=-=-  */
 
@@ -764,7 +756,6 @@ async function popula_table_cliente_filtrada(nome) {
         console.error('Error:', error);
         throw error;
     } 
-    
 }
 
 /* -=-=-=-=-=-=-=-=-           VENDAS             =-=-=-=-=-=-=-=-=-=-= */
