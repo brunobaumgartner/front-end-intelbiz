@@ -104,7 +104,11 @@ function insert_carrinho_base() {
         let chave = localStorage.key(i);
         produto[chave] = JSON.parse(localStorage.getItem(chave));
     }
+    console.log(produto)
     produto.forEach(item => {
+        if (item.id_venda == null) {
+            item.id_venda = 1
+        }
         insert_venda_base(item.id_cliente, item.id_produto, item.quantidade, item.id_venda);
     });
 
